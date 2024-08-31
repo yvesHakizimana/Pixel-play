@@ -15,7 +15,7 @@ const GenreList = () => {
                 <ListItem key={genre.id} paddingY={1}>
                     <HStack>
                         <Image src={getCroppedImageUrl(genre.image_background)} boxSize='32px' borderRadius={5} />
-                        <Text fontSize='lg'>{genre.name}</Text>
+                        <Text fontSize='xl'>{genre.name}</Text>
                     </HStack>
                 </ListItem>
             ))}

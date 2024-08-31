@@ -6,9 +6,10 @@ import GenreSpinner from "./GenreSpinner.tsx";
 
 interface  Props {
     onSelectGenre: (genre: Genre) => void;
+    selectedGenre: Genre | null;
 }
 
-const GenreList = ({onSelectGenre}: Props) => {
+const GenreList = ({onSelectGenre, selectedGenre}: Props) => {
     const { data : genres, isLoading, error} = useGenres();
 
     if (isLoading) return <GenreSpinner />
@@ -20,7 +21,7 @@ const GenreList = ({onSelectGenre}: Props) => {
                 <ListItem key={genre.id} paddingY={1}>
                     <HStack>
                         <Image src={getCroppedImageUrl(genre.image_background)} boxSize='32px' borderRadius={5} />
-                        <Button onClick={() => onSelectGenre(genre)} fontSize='xl' variant='link'>{genre.name}</Button>
+                        <Button fontWeight={genre.id === selectedGenre?.id ? 'bold': 'normal'} onClick={() => onSelectGenre(genre)} fontSize='xl' variant='link'>{genre.name}</Button>
                     </HStack>
                 </ListItem>
             ))}

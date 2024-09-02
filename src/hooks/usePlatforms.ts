@@ -1,6 +1,4 @@
-import useData from "./useData.ts";
-import {Platform} from "./useGames.ts";
-
-const usePlatforms = () => useData<Platform>('/platforms/lists/parents')
+import platforms from '../data/platforms.ts'
+const usePlatforms = () => ({ data: platforms, isLoading: false, error: null });
 
 export default usePlatforms

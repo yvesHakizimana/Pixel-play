@@ -1,5 +1,5 @@
 import {Grid, GridItem, HStack, Show} from "@chakra-ui/react";
-import NavBar from "./components/NavBar.tsx";
+import NavBar from "./components/NavbarComponents/NavBar.tsx";
 import GameGrid from "./components/GameGrid.tsx";
 import GenreList from "./components/GenresComponents/GenreList.tsx";
 import {useState} from "react";

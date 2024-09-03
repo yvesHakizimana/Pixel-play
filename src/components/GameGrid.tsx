@@ -6,7 +6,7 @@ import GameCardContainer from "./GameCardComponents/GameCardContainer.tsx";
 import {GameQuery} from "../App.tsx";
 
 interface Props {
-    gameQuery: GameQuery | null;
+    gameQuery: GameQuery;
 }
 
 const GameGrid = ({ gameQuery } : Props) => {
@@ -18,7 +18,8 @@ const GameGrid = ({ gameQuery } : Props) => {
             {isLoading && skeletons.map((skeleton) =>
                 <GameCardContainer key={skeleton}>
                     <GameCardSkeleton />
-                </GameCardContainer> )}
+                </GameCardContainer>
+            )}
             {games.map((game) => (
                 <GameCardContainer key={game.id}>
                     <GameCard game={game} />

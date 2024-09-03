@@ -6,10 +6,10 @@ import GenreSpinner from "./GenreSpinner.tsx";
 
 interface  Props {
     onSelectGenre: (genre: Genre) => void;
-    selectedGenre: Genre | null;
+    selectedGenreId?: number;
 }
 
-const GenreList = ({onSelectGenre, selectedGenre}: Props) => {
+const GenreList = ({onSelectGenre, selectedGenreId}: Props) => {
     const { data , isLoading, error} = useGenres();
 
     if (isLoading) return <GenreSpinner />
@@ -28,7 +28,12 @@ const GenreList = ({onSelectGenre, selectedGenre}: Props) => {
                                 borderRadius={5}
                                 objectFit='cover'
                             />
-                            <Button whiteSpace='normal' textAlign='left' fontWeight={genre.id === selectedGenre?.id ? 'bold': 'normal'} onClick={() => onSelectGenre(genre)} fontSize='xl' variant='link'>{genre.name}</Button>
+                            <Button
+                                whiteSpace='normal'
+                                textAlign='left'
+                                fontWeight={genre.id === selectedGenreId ? 'bold': 'normal'}
+                                onClick={() => onSelectGenre(genre)}
+                                fontSize='xl' variant='link'>{genre.name}</Button>
                         </HStack>
                     </ListItem>
                 ))}

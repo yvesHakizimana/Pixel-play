@@ -1,11 +1,10 @@
 import platforms from '../data/platforms.ts'
 import {useQuery} from "@tanstack/react-query";
-import apiClient from "../services/api-client.ts";
-import {FetchResponse} from "./useData.ts";
+import apiClient, {FetchResponse}  from "../services/api-client.ts";
 import {Platform} from "./useGames.ts";
 
 
-const usePlatforms = () => useQuery({
+const usePlatforms = () => useQuery<Platform[], Error>({
     queryKey: ['platforms'],
     queryFn: () =>
         apiClient.get<FetchResponse<Platform>>('/platforms/lists/parents')

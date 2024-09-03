@@ -1,4 +1,4 @@
-import {FetchResponse} from "./useData.ts";
+import {FetchResponse} from "../services/api-client.ts";
 import {GameQuery} from "../App.tsx";
 import {useQuery} from "@tanstack/react-query";
 import apiClient from "../services/api-client.ts";

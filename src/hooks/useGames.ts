@@ -1,8 +1,8 @@
 import ApiClient from "../services/api-client.ts";
-import {GameQuery} from "../App.tsx";
 import {useInfiniteQuery} from "@tanstack/react-query";
 import {Platform} from "./usePlatforms.ts";
 import ms from "ms"
+import {GameQuery} from "../store.ts";
 
 
 export interface Game {

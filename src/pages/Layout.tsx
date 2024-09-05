@@ -4,13 +4,10 @@ import {Box} from "@chakra-ui/react";
 
 const LayoutPage = () => {
     return (
-        <>
+        <Box paddingX={5}>
             <NavBar />
-            <Box paddingX={3}>
-                <Outlet />
-            </Box>
-
-        </>
+            <Outlet />
+        </Box>
     )
 }
 

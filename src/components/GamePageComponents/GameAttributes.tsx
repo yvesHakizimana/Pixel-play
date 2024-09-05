@@ -1,7 +1,7 @@
-import {Game} from "../entities/Game.ts";
+import {Game} from "../../entities/Game.ts";
 import DefinitionTerm from "./DefinitionTerm.tsx";
 import {SimpleGrid, Text} from "@chakra-ui/react";
-import CriticScore from "./GameCardComponents/CriticScore.tsx";
+import CriticScore from "../GameCardComponents/CriticScore.tsx";
 
 const GameAttributes = ({game} : {game: Game}) => {
     const gamePlatforms = game.parent_platforms.map( p => p.platform);

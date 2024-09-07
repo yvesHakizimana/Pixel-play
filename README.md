@@ -2,9 +2,9 @@ Here is a sample `README.md` file for your project:
 
 ---
 
-# Game Hub
+# Pixel Play
 
-Game Hub is a web application that allows users to browse and explore video games using data from the [RAWG.io](https://rawg.io/) API. It features a dynamic user interface built with React and Chakra UI, and it leverages various modern technologies to provide a smooth experience when fetching, displaying, and searching for games.
+Pixel Play is a web application that allows users to browse and explore video games using data from the [RAWG.io](https://rawg.io/) API. It features a dynamic user interface built with React and Chakra UI, and it leverages various modern technologies to provide a smooth experience when fetching, displaying, and searching for games.
 
 ## Features
 

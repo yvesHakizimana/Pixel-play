@@ -1,7 +1,3 @@
-Here is a sample `README.md` file for your project:
-
----
-
 # Pixel Play
 
 Pixel Play is a web application that allows users to browse and explore video games using data from the [RAWG.io](https://rawg.io/) API. It features a dynamic user interface built with React and Chakra UI, and it leverages various modern technologies to provide a smooth experience when fetching, displaying, and searching for games.
@@ -90,7 +86,3 @@ Feel free to open issues and pull requests if you find bugs or have feature sugg
 ## License
 
 This project is licensed under the MIT License.
-
----
-
-You can modify the sections as needed based on the specific details of your project.
